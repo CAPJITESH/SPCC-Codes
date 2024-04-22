@@ -1,0 +1,5 @@
+int jitesh = 10 + 10p;
+int i = jitesh + 1;
+int h = 10 , 10;
+float j = i / jitesh;
+float try = 3.23;
