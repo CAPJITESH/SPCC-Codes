@@ -1,4 +1,8 @@
-data = [['S', ['Aa', 'b']], ['A', ['Sc', 'd']]]
+data = [
+    ['A', ['C','d']],
+    ['B', ['C','e']],
+    ['C', ['A','B','f']],
+]
 
 def timepass(left,ind):
 
@@ -34,9 +38,10 @@ def timepass(left,ind):
     
     for k, v in copy.items():
         for j in v:
-            data[k][1].append(j)
+            if j not in data[k][1]:
+                data[k][1].append(j)
                     
-
+    
 
 
 # data = [['X', ['X1', 'Y1', '0']], ['Y', ['Y0', 'X1', '0']]]
