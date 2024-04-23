@@ -63,9 +63,9 @@
 #                         data[itr][1].append("".join(uniq.keys()))
 
 # print(data)
-            
+data = [['A', ['ABd', 'Aa', 'a']], ['B', ['Be', 'b']]]
 
-data = [['X', ['X1', 'Y1', '0']], ['Y', ['Y0', 'X1', '0']]]
+# data = [['X', ['X1', 'Y1', '0']], ['Y', ['Y0', 'X1', '0']]]
 
 for i in range(len(data)):
 
@@ -104,7 +104,8 @@ for i in range(len(data)):
 
             for k in r:
                 index = k.find(left)
-                if index != -1 and k.find(f'{left}^') == -1:
+                # For not replacing anything from ^ wale productions
+                if index != -1 and k.find(f'{left}^') == -1 and k.find('^') == -1:
                     # temp_data = k.replace(left, f"{left}^")
 
                     for g in data[i][1]:
