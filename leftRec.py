@@ -1,7 +1,6 @@
 data = [
-    ['A', ['C','d']],
-    ['B', ['C','e']],
-    ['C', ['A','B','f']],
+    ['X', ['X1','Y1','0']],
+    ['Y', ['Y0','X1', '0']],
 ]
 
 def timepass(left,ind):
@@ -23,16 +22,16 @@ def timepass(left,ind):
                         temp_data = itr.replace(left, g)
                         # print(temp_data)
 
-                        uniq = {}
-                        for c, t in enumerate(temp_data):
-                            if t not in uniq:
-                                uniq[t] = c
+                        # uniq = {}
+                        # for c, t in enumerate(temp_data):
+                        #     if t not in uniq:
+                        #         uniq[t] = c
                         # print(" ".join(uniq.keys()))
                         
                         if i not in copy.keys():
                             copy[i] = []
                         
-                        copy[i].append("".join(uniq.keys()))
+                        copy[i].append(temp_data)
                     
                     data[i][1].remove(itr)
     
@@ -54,10 +53,12 @@ for i in range(len(data)):
     alpha = []
     beta = []
 
-    timepass(left, i)
+   
 
     # print(data)
-
+    if 'è' in right:
+        continue
+    
     for j in right:
         index = j.find(left)
         if index == -1:
@@ -102,8 +103,10 @@ for i in range(len(data)):
 
         #             data[itr][1].remove(k)
         #             # print('\n',left,data[itr][1], "\n")
+    timepass(left, i)
 
-print(data)
+for i in data:
+    print(i)
 
 
 
